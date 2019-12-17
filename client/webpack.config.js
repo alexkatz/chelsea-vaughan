@@ -24,6 +24,7 @@ const config = env => ({
       hash: true,
       filename: 'index.html',
       title: 'Chelsea Vaughan',
+      meta: { viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
     }),
     new HtmlWebpackRootPlugin(),
     ...(env === 'production' ? [
@@ -33,7 +34,7 @@ const config = env => ({
       new webpack.optimize.UglifyJsPlugin(),
     ] : []),
     new CopyWebpackPlugin([
-      { from: 'src/assets/images', to: 'images' }
+      { from: 'src/assets/image', to: 'image' }
     ]),
   ],
   devtool: 'source-map',
