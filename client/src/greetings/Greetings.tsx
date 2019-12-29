@@ -9,11 +9,13 @@ import instagramLogo from '../assets/vector/instagram-logo.svg';
 import etsyLogo from '../assets/vector/etsy-logo.svg';
 
 const LOGOS = [facebookLogo, instagramLogo, etsyLogo];
-const BOTTOM_MARGIN_FACTOR = 0.20;
+
 const SIDE_MARGIN = 16;
 
 export const Greetings: React.FC = () => {
   const { height: windowHeight, width: windowWidth } = useWindowSize();
+  const isLandscape = windowWidth > windowHeight;
+  const BOTTOM_MARGIN_FACTOR = isLandscape ? 0.20 : 0.70;
   const greetingsHeight = windowHeight - (windowHeight * BOTTOM_MARGIN_FACTOR);
   const halfHeight = greetingsHeight / 2;
   const { y: scrollY } = useWindowScrollPosition({ throttleWait: 4 });

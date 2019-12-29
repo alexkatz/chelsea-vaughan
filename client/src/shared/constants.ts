@@ -5,7 +5,7 @@ export const Constants = {
   MEDIA_BREAKPOINTS: {
     SMALLER_DESKTOP: 1400,
     TABLET: 768,
-    MOBILE: 412,
+    MOBILE: 578,
   },
   GRID: {
     ROW: {
