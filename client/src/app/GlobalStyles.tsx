@@ -20,7 +20,7 @@ export const GlobalStyles: React.FC = () => (
       body {
         background-color: rgb(230, 240, 250);
         background-image: linear-gradient(180deg, rgb(230, 240, 250) 0%, rgb(30, 40, 50) 70%);
-        color: black;
+        color: #1E3232;
         font-family: 'SulphurPoint-Light', Arial, Helvetica, sans-serif;
       }
       

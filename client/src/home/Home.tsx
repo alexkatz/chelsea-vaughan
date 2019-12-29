@@ -48,7 +48,7 @@ export const Home: React.FC = () => {
               whileHover={{ scale: scaleBoost }}
               whileTap={{ scale: scaleBoost }}
               css={css`
-                /* box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.2); */
+                box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.2);
                 transition: left 0.35s, top 0.35s;
               `}
             >
