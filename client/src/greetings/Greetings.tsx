@@ -8,7 +8,7 @@ import facebookLogo from '../assets/vector/facebook-logo.svg';
 import instagramLogo from '../assets/vector/instagram-logo.svg';
 import etsyLogo from '../assets/vector/etsy-logo.svg';
 
-const LOGOS = [facebookLogo, instagramLogo, etsyLogo];
+const LOGOS = [instagramLogo, facebookLogo, etsyLogo];
 
 const SIDE_MARGIN = 16;
 
