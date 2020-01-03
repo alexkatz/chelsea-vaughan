@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/core';
 import Masonry from 'react-masonry-css';
-import { imageNames, mediaAt } from '../shared/utils';
+import { imageNames, screenWidthAt } from '../shared/utils';
 import { Constants } from '../shared/constants';
 import { useWindowSize } from '../shared/hooks/useWindowSize';
 import { motion } from 'framer-motion';
@@ -23,15 +23,15 @@ export const Home: React.FC = () => {
         display: grid;
         grid-template-columns: auto 1200px auto;
 
-        ${mediaAt(Constants.MEDIA_BREAKPOINTS.SMALLER_DESKTOP)} {
+        ${screenWidthAt(Constants.MEDIA_BREAKPOINTS.SMALLER_DESKTOP)} {
           grid-template-columns: auto ${Constants.MEDIA_BREAKPOINTS.TABLET}px auto;
         }
         
-        ${mediaAt(Constants.MEDIA_BREAKPOINTS.TABLET)} {
+        ${screenWidthAt(Constants.MEDIA_BREAKPOINTS.TABLET)} {
           grid-template-columns: auto 100% auto;
         }
 
-        ${mediaAt(Constants.MEDIA_BREAKPOINTS.MOBILE)} {
+        ${screenWidthAt(Constants.MEDIA_BREAKPOINTS.MOBILE)} {
           grid-template-columns: auto 100% auto;
         }
       `}

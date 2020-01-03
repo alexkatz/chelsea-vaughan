@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/core';
 import { Constants } from '../shared/constants';
-import { mediaAt } from '../shared/utils';
+import { screenWidthAt } from '../shared/utils';
 
 export const About: React.FC = () => (
   <div
@@ -15,7 +15,7 @@ export const About: React.FC = () => (
       font-family: 'SulphurPoint-Regular', Arial, Helvetica, sans-serif;
       font-size: large;
 
-      ${mediaAt(620)} {
+      ${screenWidthAt(620)} {
         margin-top: 20px;
         margin-bottom: 20px;
       }

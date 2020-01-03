@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/core';
 import { Constants } from '../shared/constants';
-import { mediaAt as screenWidthAt } from '../shared/utils';
+import { screenWidthAt } from '../shared/utils';
 import { useWindowSize } from '../shared/hooks/useWindowSize';
 import { useWindowScrollPosition } from '../shared/hooks/useWindowScrollPosition';
 import facebookLogo from '../assets/vector/facebook-logo.svg';

@@ -6,6 +6,7 @@ import { Home } from '../home/Home';
 import { MasonryStyles } from './MasonryStyles';
 import { Sidebar } from '../sidebar/Sidebar';
 import { About } from '../about/About';
+import { GreetingsNew } from '../greetings/GreetingsNew';
 
 export const App: React.FC = () => (
   <>
@@ -15,7 +16,7 @@ export const App: React.FC = () => (
       <div id='background-image-container'>
         <div id='background-image' />
       </div>
-      <Route path='/:headerItemValue?' component={Greetings} />
+      <Route path='/:headerItemValue?' component={GreetingsNew} />
       {/* <Route path='/:headerItemValue?' component={About} /> */}
       {/* <Route path='/:headerItemValue?' component={Sidebar} /> */}
       <Switch>
