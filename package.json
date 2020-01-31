@@ -11,7 +11,7 @@
     "yarn": "^1.19"
   },
   "scripts": {
-    "build-all": "rm -rf public && cd client && yarn install && yarn build && mkdir -p ../public && cp dist/* ../public && cd .. && yarn build",
+    "build-all": "rm -rf public && cd client && yarn install && yarn build && mkdir -p ../public && cp -R dist/* ../public && cd .. && yarn build",
     "build": "rm -rf dist && tsc -p tsconfig.json",
     "start": "node ./dist/server.js",
     "start-nodemon": "nodemon ./dist/server.js",

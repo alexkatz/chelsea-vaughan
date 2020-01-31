@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-var CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackRootPlugin = require('html-webpack-root-plugin');
 
 const config = env => ({
@@ -33,9 +32,6 @@ const config = env => ({
       }),
       new webpack.optimize.UglifyJsPlugin(),
     ] : []),
-    new CopyWebpackPlugin([
-      { from: 'src/assets/image', to: 'image' }
-    ]),
   ],
   devtool: 'source-map',
   module: {
@@ -46,9 +42,14 @@ const config = env => ({
         loader: 'babel-loader',
       },
       {
-        test: /\.(eot|woff|woff2|ttf|svg|png|jpg)$/,
+        test: /\.(eot|woff|woff2|ttf)$/,
         include: [path.resolve(__dirname + '/src')],
         loader: 'url-loader?limit=50000&name=[name].[ext]',
+      },
+      {
+        test: /\.(svg|png|jpg)$/,
+        include: [path.resolve(__dirname + '/src')],
+        loader: 'url-loader?limit=50000&name=image/[name].[ext]',
       },
     ],
   },

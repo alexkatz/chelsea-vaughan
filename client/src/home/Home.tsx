@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 export const Home: React.FC = () => {
   const imageUrls = imageNames.map(n => `image/${n}`)
   const columnCount = (() => {
-    const { width, height } = useWindowSize();
+    const { width } = useWindowSize();
     if (width >= Constants.MEDIA_BREAKPOINTS.SMALLER_DESKTOP) return 3;
     if (width >= Constants.MEDIA_BREAKPOINTS.TABLET) return 2;
     if (width < Constants.MEDIA_BREAKPOINTS.MOBILE) return 1;
