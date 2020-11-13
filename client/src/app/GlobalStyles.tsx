@@ -1,5 +1,5 @@
 import React from 'react';
-import { Global, css } from '@emotion/core';
+import { Global, css } from '@emotion/react';
 import { Constants } from '../shared/constants';
 import sulphurPointLight from '../assets/font/SulphurPoint-Light.ttf';
 import sulphurPointRegular from '../assets/font/SulphurPoint-Regular.ttf';
@@ -20,11 +20,13 @@ export const GlobalStyles: React.FC = () => (
       body {
         background-color: rgb(230, 240, 250);
         background-image: linear-gradient(180deg, rgb(230, 240, 250) 0%, rgb(30, 40, 50) 70%);
-        color: #1E3232;
+        color: #1e3232;
         font-family: 'SulphurPoint-Light', Arial, Helvetica, sans-serif;
       }
-      
-      html, body, #root {
+
+      html,
+      body,
+      #root {
         margin: 0;
         position: relative;
       }
@@ -47,7 +49,6 @@ export const GlobalStyles: React.FC = () => (
         background-size: contain;
         background-position: top;
         opacity: 0;
-
       }
 
       div {
@@ -56,9 +57,9 @@ export const GlobalStyles: React.FC = () => (
 
       #root {
         display: grid;
-        grid-template-rows: 
-          [${Constants.GRID.ROW.GREETINGS_START}] auto 
-          [${Constants.GRID.ROW.HOME_START}] auto;
+        grid-template-rows:
+          [ ${Constants.GRID.ROW.GREETINGS_START}] auto
+          [ ${Constants.GRID.ROW.HOME_START}] auto;
       }
     `}
   />

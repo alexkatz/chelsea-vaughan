@@ -1,5 +1,5 @@
 import React from 'react';
-import { Global, css } from '@emotion/core';
+import { Global, css } from '@emotion/react';
 import { Constants } from '../shared/constants';
 
 export const MasonryStyles: React.FC = () => (
@@ -16,7 +16,8 @@ export const MasonryStyles: React.FC = () => (
       }
 
       /* Style your items */
-      .my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
+      .my-masonry-grid_column > div {
+        /* change div to reference your elements you put in <Masonry> */
         margin-bottom: ${Constants.MASONRY_GUTTER}px;
       }
     `}

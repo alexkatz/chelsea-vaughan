@@ -26,12 +26,14 @@ const config = env => ({
       meta: { viewport: 'width=device-width, initial-scale=1' },
     }),
     new HtmlWebpackRootPlugin(),
-    ...(env === 'production' ? [
-      new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify('production')
-      }),
-      new webpack.optimize.UglifyJsPlugin(),
-    ] : []),
+    ...(env === 'production'
+      ? [
+          new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('production'),
+          }),
+          new webpack.optimize.UglifyJsPlugin(),
+        ]
+      : []),
   ],
   devtool: 'source-map',
   module: {
@@ -39,17 +41,37 @@ const config = env => ({
       {
         test: /\.tsx?$/,
         include: [path.resolve(__dirname + '/src')],
-        loader: 'babel-loader',
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+        ],
       },
       {
         test: /\.(eot|woff|woff2|ttf)$/,
         include: [path.resolve(__dirname + '/src')],
-        loader: 'url-loader?limit=50000&name=[name].[ext]',
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 5000,
+              name: '[name].[ext]',
+            },
+          },
+        ],
       },
       {
         test: /\.(svg|png|jpg)$/,
         include: [path.resolve(__dirname + '/src')],
-        loader: 'url-loader?limit=50000&name=image/[name].[ext]',
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 5000,
+              name: 'image/[name].[ext]',
+            },
+          },
+        ],
       },
     ],
   },
